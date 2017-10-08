@@ -1,0 +1,12 @@
+{
+  "connectionClass": [
+    "Fusio\\Adapter\\Google\\Connection\\BigQuery",
+    "Fusio\\Adapter\\Google\\Connection\\Datastore",
+    "Fusio\\Adapter\\Google\\Connection\\Language",
+    "Fusio\\Adapter\\Google\\Connection\\Logging",
+    "Fusio\\Adapter\\Google\\Connection\\PubSub",
+    "Fusio\\Adapter\\Google\\Connection\\Spanner",
+    "Fusio\\Adapter\\Google\\Connection\\Storage",
+    "Fusio\\Adapter\\Google\\Connection\\Translate"
+  ]
+}
