@@ -29,6 +29,7 @@ use Fusio\Engine\Form\Element\TextArea;
 use Fusio\Engine\Parameters;
 use Fusio\Engine\Test\EngineTestCaseTrait;
 use Google\Cloud\Logging\LoggingClient;
+use PHPUnit\Framework\TestCase;
 
 /**
  * LoggingTest
@@ -37,7 +38,7 @@ use Google\Cloud\Logging\LoggingClient;
  * @license http://www.gnu.org/licenses/agpl-3.0
  * @link    http://fusio-project.org
  */
-class LoggingTest extends \PHPUnit_Framework_TestCase
+class LoggingTest extends TestCase
 {
     use EngineTestCaseTrait;
 

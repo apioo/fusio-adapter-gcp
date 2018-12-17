@@ -29,6 +29,7 @@ use Fusio\Engine\Form\Element\TextArea;
 use Fusio\Engine\Parameters;
 use Fusio\Engine\Test\EngineTestCaseTrait;
 use Google\Cloud\Spanner\SpannerClient;
+use PHPUnit\Framework\TestCase;
 
 /**
  * SpannerTest
@@ -37,7 +38,7 @@ use Google\Cloud\Spanner\SpannerClient;
  * @license http://www.gnu.org/licenses/agpl-3.0
  * @link    http://fusio-project.org
  */
-class SpannerTest extends \PHPUnit_Framework_TestCase
+class SpannerTest extends TestCase
 {
     use EngineTestCaseTrait;
 

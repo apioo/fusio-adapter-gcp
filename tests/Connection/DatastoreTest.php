@@ -29,6 +29,7 @@ use Fusio\Engine\Form\Element\TextArea;
 use Fusio\Engine\Parameters;
 use Fusio\Engine\Test\EngineTestCaseTrait;
 use Google\Cloud\Datastore\DatastoreClient;
+use PHPUnit\Framework\TestCase;
 
 /**
  * DatastoreTest
@@ -37,7 +38,7 @@ use Google\Cloud\Datastore\DatastoreClient;
  * @license http://www.gnu.org/licenses/agpl-3.0
  * @link    http://fusio-project.org
  */
-class DatastoreTest extends \PHPUnit_Framework_TestCase
+class DatastoreTest extends TestCase
 {
     use EngineTestCaseTrait;
 

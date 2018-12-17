@@ -29,6 +29,7 @@ use Fusio\Engine\Form\Element\TextArea;
 use Fusio\Engine\Parameters;
 use Fusio\Engine\Test\EngineTestCaseTrait;
 use Google\Cloud\Storage\StorageClient;
+use PHPUnit\Framework\TestCase;
 
 /**
  * StorageTest
@@ -37,7 +38,7 @@ use Google\Cloud\Storage\StorageClient;
  * @license http://www.gnu.org/licenses/agpl-3.0
  * @link    http://fusio-project.org
  */
-class StorageTest extends \PHPUnit_Framework_TestCase
+class StorageTest extends TestCase
 {
     use EngineTestCaseTrait;
 

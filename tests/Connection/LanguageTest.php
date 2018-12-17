@@ -29,6 +29,7 @@ use Fusio\Engine\Form\Element\TextArea;
 use Fusio\Engine\Parameters;
 use Fusio\Engine\Test\EngineTestCaseTrait;
 use Google\Cloud\Language\LanguageClient;
+use PHPUnit\Framework\TestCase;
 
 /**
  * LanguageTest
@@ -37,7 +38,7 @@ use Google\Cloud\Language\LanguageClient;
  * @license http://www.gnu.org/licenses/agpl-3.0
  * @link    http://fusio-project.org
  */
-class LanguageTest extends \PHPUnit_Framework_TestCase
+class LanguageTest extends TestCase
 {
     use EngineTestCaseTrait;
 

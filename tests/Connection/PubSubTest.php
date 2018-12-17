@@ -30,6 +30,7 @@ use Fusio\Engine\Form\Element\TextArea;
 use Fusio\Engine\Parameters;
 use Fusio\Engine\Test\EngineTestCaseTrait;
 use Google\Cloud\PubSub\PubSubClient;
+use PHPUnit\Framework\TestCase;
 
 /**
  * PubSubTest
@@ -38,7 +39,7 @@ use Google\Cloud\PubSub\PubSubClient;
  * @license http://www.gnu.org/licenses/agpl-3.0
  * @link    http://fusio-project.org
  */
-class PubSubTest extends \PHPUnit_Framework_TestCase
+class PubSubTest extends TestCase
 {
     use EngineTestCaseTrait;
 
