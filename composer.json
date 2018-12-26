@@ -1,6 +1,6 @@
 {
-  "name": "fusio/adapter-google",
-  "description": "Provides connections to google cloud services",
+  "name": "fusio/adapter-gcp",
+  "description": "Provides connection to the google cloud platform",
   "homepage": "http://fusio-project.org",
   "keywords": ["fusio-adapter"],
   "license": "AGPL-3.0",
@@ -21,12 +21,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Fusio\\Adapter\\Google\\": "src/"
+      "Fusio\\Adapter\\Gcp\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Fusio\\Adapter\\Google\\Tests\\": "tests/"
+      "Fusio\\Adapter\\Gcp\\Tests\\": "tests/"
     }
   }
 }

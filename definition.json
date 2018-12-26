@@ -1,5 +1,5 @@
 {
   "connectionClass": [
-    "Fusio\\Adapter\\Google\\Connection\\Google",
+    "Fusio\\Adapter\\Gcp\\Connection\\Gcp"
   ]
 }

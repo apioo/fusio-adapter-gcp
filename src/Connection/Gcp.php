@@ -19,7 +19,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Fusio\Adapter\Google\Connection;
+namespace Fusio\Adapter\Gcp\Connection;
 
 use Fusio\Engine\ConnectionInterface;
 use Fusio\Engine\Form\BuilderInterface;
@@ -28,17 +28,17 @@ use Fusio\Engine\ParametersInterface;
 use Google\Cloud\Core\ServiceBuilder;
 
 /**
- * Google
+ * Gcp
  *
  * @author  Christoph Kappestein <christoph.kappestein@gmail.com>
  * @license http://www.gnu.org/licenses/agpl-3.0
  * @link    http://fusio-project.org
  */
-class Google implements ConnectionInterface
+class Gcp implements ConnectionInterface
 {
     public function getName()
     {
-        return 'Google';
+        return 'Gcp';
     }
 
     /**

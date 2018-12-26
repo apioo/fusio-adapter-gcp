@@ -19,9 +19,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Fusio\Adapter\Google\Tests;
+namespace Fusio\Adapter\Gcp\Tests;
 
-use Fusio\Adapter\Google\Adapter;
+use Fusio\Adapter\Gcp\Adapter;
 use Fusio\Engine\Test\AdapterTestCase;
 
 /**

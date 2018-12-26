@@ -19,7 +19,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Fusio\Adapter\Google;
+namespace Fusio\Adapter\Gcp;
 
 use Fusio\Engine\AdapterInterface;
 

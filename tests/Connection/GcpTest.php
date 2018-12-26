@@ -19,9 +19,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Fusio\Adapter\Google\Tests\Connection;
+namespace Fusio\Adapter\Gcp\Tests\Connection;
 
-use Fusio\Adapter\Google\Connection\Google;
+use Fusio\Adapter\Gcp\Connection\Gcp;
 use Fusio\Engine\Form\Builder;
 use Fusio\Engine\Form\Container;
 use Fusio\Engine\Form\Element\Input;
@@ -32,20 +32,20 @@ use Google\Cloud\Core\ServiceBuilder;
 use PHPUnit\Framework\TestCase;
 
 /**
- * GoogleTest
+ * GcpTest
  *
  * @author  Christoph Kappestein <christoph.kappestein@gmail.com>
  * @license http://www.gnu.org/licenses/agpl-3.0
  * @link    http://fusio-project.org
  */
-class GoogleTest extends TestCase
+class GcpTest extends TestCase
 {
     use EngineTestCaseTrait;
 
     public function testGetConnection()
     {
-        /** @var Google $connectionFactory */
-        $connectionFactory = $this->getConnectionFactory()->factory(Google::class);
+        /** @var Gcp $connectionFactory */
+        $connectionFactory = $this->getConnectionFactory()->factory(Gcp::class);
 
         $config = new Parameters([
             'projectId' => 'foo',
@@ -58,7 +58,7 @@ class GoogleTest extends TestCase
 
     public function testConfigure()
     {
-        $connection = $this->getConnectionFactory()->factory(Google::class);
+        $connection = $this->getConnectionFactory()->factory(Gcp::class);
         $builder    = new Builder();
         $factory    = $this->getFormElementFactory();
 
