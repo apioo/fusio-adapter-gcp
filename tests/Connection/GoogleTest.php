@@ -21,31 +21,31 @@
 
 namespace Fusio\Adapter\Google\Tests\Connection;
 
-use Fusio\Adapter\Google\Connection\Language;
+use Fusio\Adapter\Google\Connection\Google;
 use Fusio\Engine\Form\Builder;
 use Fusio\Engine\Form\Container;
 use Fusio\Engine\Form\Element\Input;
 use Fusio\Engine\Form\Element\TextArea;
 use Fusio\Engine\Parameters;
 use Fusio\Engine\Test\EngineTestCaseTrait;
-use Google\Cloud\Language\LanguageClient;
+use Google\Cloud\Core\ServiceBuilder;
 use PHPUnit\Framework\TestCase;
 
 /**
- * LanguageTest
+ * GoogleTest
  *
  * @author  Christoph Kappestein <christoph.kappestein@gmail.com>
  * @license http://www.gnu.org/licenses/agpl-3.0
  * @link    http://fusio-project.org
  */
-class LanguageTest extends TestCase
+class GoogleTest extends TestCase
 {
     use EngineTestCaseTrait;
 
     public function testGetConnection()
     {
-        /** @var Language $connectionFactory */
-        $connectionFactory = $this->getConnectionFactory()->factory(Language::class);
+        /** @var Google $connectionFactory */
+        $connectionFactory = $this->getConnectionFactory()->factory(Google::class);
 
         $config = new Parameters([
             'projectId' => 'foo',
@@ -53,12 +53,12 @@ class LanguageTest extends TestCase
 
         $connection = $connectionFactory->getConnection($config);
 
-        $this->assertInstanceOf(LanguageClient::class, $connection);
+        $this->assertInstanceOf(ServiceBuilder::class, $connection);
     }
 
     public function testConfigure()
     {
-        $connection = $this->getConnectionFactory()->factory(Language::class);
+        $connection = $this->getConnectionFactory()->factory(Google::class);
         $builder    = new Builder();
         $factory    = $this->getFormElementFactory();
 

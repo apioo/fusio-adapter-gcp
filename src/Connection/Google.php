@@ -25,23 +25,27 @@ use Fusio\Engine\ConnectionInterface;
 use Fusio\Engine\Form\BuilderInterface;
 use Fusio\Engine\Form\ElementFactoryInterface;
 use Fusio\Engine\ParametersInterface;
+use Google\Cloud\Core\ServiceBuilder;
 
 /**
- * ConnectionAbstract
+ * Google
  *
  * @author  Christoph Kappestein <christoph.kappestein@gmail.com>
  * @license http://www.gnu.org/licenses/agpl-3.0
  * @link    http://fusio-project.org
  */
-abstract class ConnectionAbstract implements ConnectionInterface
+class Google implements ConnectionInterface
 {
-    public function configure(BuilderInterface $builder, ElementFactoryInterface $elementFactory)
+    public function getName()
     {
-        $builder->add($elementFactory->newInput('projectId', 'Project-Id', 'The project ID from the Google Developers Console'));
-        $builder->add($elementFactory->newTextArea('keyFile', 'Key-File', 'json', 'The contents of the service account credentials .json file retrieved from the Google Developers Console.'));
+        return 'Google';
     }
 
-    protected function getParams(ParametersInterface $config)
+    /**
+     * @param \Fusio\Engine\ParametersInterface $config
+     * @return \Google\Cloud\Core\ServiceBuilder
+     */
+    public function getConnection(ParametersInterface $config)
     {
         $params = [
             'projectId' => $config->get('projectId'),
@@ -52,6 +56,12 @@ abstract class ConnectionAbstract implements ConnectionInterface
             $params['keyFile'] = json_decode($keyFile, true);
         }
 
-        return $params;
+        return new ServiceBuilder($params);
+    }
+
+    public function configure(BuilderInterface $builder, ElementFactoryInterface $elementFactory)
+    {
+        $builder->add($elementFactory->newInput('projectId', 'Project-Id', 'The project ID from the Google Developers Console'));
+        $builder->add($elementFactory->newTextArea('keyFile', 'Key-File', 'json', 'The contents of the service account credentials .json file retrieved from the Google Developers Console.'));
     }
 }
