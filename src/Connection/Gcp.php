@@ -55,7 +55,7 @@ class Gcp implements ConnectionInterface
         return new ServiceBuilder($params);
     }
 
-    public function configure(BuilderInterface $builder, ElementFactoryInterface $elementFactory)
+    public function configure(BuilderInterface $builder, ElementFactoryInterface $elementFactory): void
     {
         $builder->add($elementFactory->newInput('projectId', 'Project-Id', 'The project ID from the Google Developers Console'));
         $builder->add($elementFactory->newTextArea('keyFile', 'Key-File', 'json', 'The contents of the service account credentials .json file retrieved from the Google Developers Console.'));
