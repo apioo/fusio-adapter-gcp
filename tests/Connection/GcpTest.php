@@ -22,14 +22,13 @@
 namespace Fusio\Adapter\Gcp\Tests\Connection;
 
 use Fusio\Adapter\Gcp\Connection\Gcp;
+use Fusio\Adapter\Gcp\Tests\GcpTestCase;
 use Fusio\Engine\Form\Builder;
 use Fusio\Engine\Form\Container;
 use Fusio\Engine\Form\Element\Input;
 use Fusio\Engine\Form\Element\TextArea;
 use Fusio\Engine\Parameters;
-use Fusio\Engine\Test\EngineTestCaseTrait;
 use Google\Cloud\Core\ServiceBuilder;
-use PHPUnit\Framework\TestCase;
 
 /**
  * GcpTest
@@ -38,10 +37,8 @@ use PHPUnit\Framework\TestCase;
  * @license http://www.gnu.org/licenses/agpl-3.0
  * @link    https://www.fusio-project.org/
  */
-class GcpTest extends TestCase
+class GcpTest extends GcpTestCase
 {
-    use EngineTestCaseTrait;
-
     public function testGetConnection()
     {
         /** @var Gcp $connectionFactory */
