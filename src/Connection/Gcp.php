@@ -21,7 +21,7 @@
 
 namespace Fusio\Adapter\Gcp\Connection;
 
-use Fusio\Engine\ConnectionInterface;
+use Fusio\Engine\ConnectionAbstract;
 use Fusio\Engine\Form\BuilderInterface;
 use Fusio\Engine\Form\ElementFactoryInterface;
 use Fusio\Engine\ParametersInterface;
@@ -34,11 +34,11 @@ use Google\Cloud\Core\ServiceBuilder;
  * @license http://www.gnu.org/licenses/agpl-3.0
  * @link    https://www.fusio-project.org/
  */
-class Gcp implements ConnectionInterface
+class Gcp extends ConnectionAbstract
 {
     public function getName(): string
     {
-        return 'Gcp';
+        return 'GCP';
     }
 
     public function getConnection(ParametersInterface $config): ServiceBuilder
