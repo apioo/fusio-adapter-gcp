@@ -21,11 +21,9 @@
 
 namespace Fusio\Adapter\Gcp\Tests;
 
-use Fusio\Adapter\Gcp\Connection\Gcp;
-use Fusio\Engine\Action\Runtime;
+use Fusio\Adapter\Gcp\Adapter;
 use Fusio\Engine\Test\EngineTestCaseTrait;
 use PHPUnit\Framework\TestCase;
-use Symfony\Component\DependencyInjection\Container;
 
 /**
  * GcpTestCase
@@ -38,8 +36,8 @@ abstract class GcpTestCase extends TestCase
 {
     use EngineTestCaseTrait;
 
-    protected function configure(Runtime $runtime, Container $container): void
+    protected function getAdapterClass(): string
     {
-        $container->set(Gcp::class, new Gcp());
+        return Adapter::class;
     }
 }
